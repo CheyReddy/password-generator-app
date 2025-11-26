@@ -65,7 +65,12 @@ function PasswordGenerator() {
             type="number"
             ref={inputRef}
             value={passwordLength}
-            onChange={(e) => setPasswordLength(e.target.value)}
+            onChange={(e) => {
+              setPasswordLength(e.target.value);
+              setPassword("");
+              setCopyContent("");
+            }}
+
           />
         </div>
         <div className="password-options">
